@@ -6,6 +6,7 @@ import java.util.List;
 import com.constants.Endpoints;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.model.CreateUser;
 import com.model.MultiUsers;
 import com.utils.ConfigManager;
 
@@ -48,5 +49,19 @@ public class PersonServiceHelper {
 		
 		MultiUsers users=response.as(type);
 		return users;
+	}
+	
+	public Response createAUser() {
+		CreateUser user=new CreateUser();
+		user.setName("morpheus");
+		user.setJob("leader");
+		
+		Response response=RestAssured.given()
+						.contentType(ContentType.JSON)
+						.log().all()
+					.when()
+						.post(Endpoints.GET_ALLUSERS)
+						.andReturn();
+		return response;
 	}
 }
