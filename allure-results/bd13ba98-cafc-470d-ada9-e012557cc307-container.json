@@ -1,0 +1,1 @@
+{"uuid":"bd13ba98-cafc-470d-ada9-e012557cc307","name":"com.master.tests.GetPerson","children":["7be9cc4a-e145-49de-b988-0ef9a55d8e1a"],"befores":[{"name":"init","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1657084880571,"stop":1657084880572}],"afters":[],"start":1657084875120,"stop":1657084881560}

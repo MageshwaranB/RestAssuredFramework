@@ -23,9 +23,9 @@ public class GetPerson {
 		}
 	
 		@Test
-		@Owner("Magesh")
-		@Severity(SeverityLevel.MINOR)
-		@Description("Getting all the users")
+		@Owner("Mageshwaran")
+		@Severity(SeverityLevel.NORMAL)
+		@Description("Test to check the list of users")
 		public void getAllUsersTest() {
 			MultiUsers userList=personServiceHelper.getAllUsers();
 			//For my reference I have used an sysout statement to get all the firstNames from the endpoint
