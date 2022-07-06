@@ -1,26 +1,31 @@
 package com.master.tests;
 
-import java.util.List;
-
-import org.hamcrest.Matchers;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.helpers.PersonServiceHelper;
 import com.model.MultiUsers;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 public class GetPerson {
 	
 		PersonServiceHelper personServiceHelper;
 		
-		@BeforeMethod
+		@BeforeClass
 		public void init() {
 //when we create an object of personservicehelper, it will set the baseuri 
 			personServiceHelper=new PersonServiceHelper();
 		}
 	
 		@Test
+		@Owner("Mageshwaran")
+		@Severity(SeverityLevel.NORMAL)
+		@Description("Test to check the list of users")
 		public void getAllUsersTest() {
 			MultiUsers userList=personServiceHelper.getAllUsers();
 			//For my reference I have used an sysout statement to get all the firstNames from the endpoint
